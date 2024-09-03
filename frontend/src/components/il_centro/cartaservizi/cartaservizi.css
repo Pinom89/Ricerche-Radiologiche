@@ -1,0 +1,14 @@
+.title_carta_servizi {
+  color: #ffffff;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 31px;
+  background-color: #08624a;
+}
+
+.text_carta_servizi {
+  font-size: 14px;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: black;
+}

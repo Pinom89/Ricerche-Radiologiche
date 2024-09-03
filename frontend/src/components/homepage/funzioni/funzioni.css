@@ -1,0 +1,12 @@
+.classfunz{
+    border: solid 1px grey;
+    border-radius: 10px;
+    color: #20715C;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.classfunz:hover{
+    border: solid 2px #20715C;
+    transform: scale(1.1); 
+}

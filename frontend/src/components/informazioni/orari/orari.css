@@ -1,0 +1,41 @@
+.title_orari{
+    color: #20715C;
+}
+
+.title_principale_orari{
+   color :#FFFFFF;
+   font-family: 'Comforta', sans-serif;
+   font-weight: 100;
+   font-size: 31px;
+   background-color: #08624A 
+}
+
+.text_orari{
+    font-size:14px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    color: black;
+    
+ }
+
+ .h4_orari{
+    font-size: 18px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #20715C;
+ }
+
+ .h2_orari{
+    font-size: 28px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+   
+ }
+ .icon_orari{
+    font-family:"Comfortaa", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    color: #08624A;
+    border: 1px solid #08624A;
+    border-radius: 50%;
+    padding: 15px 20px;
+ }

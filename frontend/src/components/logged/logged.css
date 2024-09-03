@@ -1,0 +1,19 @@
+.imgprofile {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+}
+
+.textsize {
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dropdown-menu {
+  background-color: white; /* Sfondo bianco per il dropdown */
+}
+
+.custom-link {
+  color: inherit; /* Mantiene il colore del testo del contesto genitore */
+  text-decoration: none; /* Rimuove la sottolineatura */
+}

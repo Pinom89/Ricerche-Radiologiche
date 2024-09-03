@@ -1,0 +1,37 @@
+.title_400 {
+    border-left: 7px solid #20715c;
+    color: #20715c;
+  }
+  
+  .title_principale_404 {
+    color: #ffffff;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 31px;
+    background-color: #08624a;
+  }
+  
+  .text_404 {
+    font-size: 14px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    color: black;
+  }
+  
+  .h4-404 {
+    font-size: 17px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+  }
+  
+  .h2_400, .h3_404 {
+    font-size: 28px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    color: #08624a
+  }
+  
+  .image-404 {
+    max-width: 100%;
+    height: auto;
+  }

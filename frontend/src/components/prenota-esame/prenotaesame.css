@@ -1,0 +1,125 @@
+.titolo-prenotazione{
+    color :#FFFFFF;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 28px;
+    background-color: #08624A 
+}
+
+.prenotazione-esame{
+    background-color: #08624A;
+}
+
+.numeriutili{
+    border:#08624A 2px solid;
+    position:relative
+}
+
+.icon-tel{
+    color: #FFFFFF;
+    background-color: #08624A;
+    border-radius: 50%;
+    padding: 0.6rem;
+    font-size: 20px;
+    position: absolute;
+    top: -20px;
+    left: 250px;
+    width: 50px; /* Imposta una larghezza fissa */
+    height: 50px; /* Imposta un'altezza fissa uguale alla larghezza */
+    
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #198754;
+    --bs-btn-border-color: #198754;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #198754;
+    --bs-btn-hover-border-color: #198754;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #198754;
+    --bs-btn-active-border-color: #198754;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #198754;
+    --bs-btn-disabled-border-color: #198754;
+    font-size: Arial;
+    font-weight: 400;
+    font-size: 13px;
+    
+    /* Aggiungi queste nuove proprietà per l'effetto satinato */
+    transition: all 0.3s ease;
+}
+
+.btn_prenota_esame_online {
+    color: #ffffff;
+    font-size: Arial;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.btn-primary:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px 2px #427388;
+}
+
+.h5_prenotazione {
+    color: #08624A;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.h5_prenotazione_number {
+    color: #08624A;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.h4_prenotazione {
+    color: #08624A;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.title_form_prenotazione {
+    color: #08624A;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.p_prenotazione {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+@media (max-width: 767px) {
+    .icon-tel {
+        left: 50%;
+        top: -25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .icon-tel {
+        left: 40%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .icon-tel {
+        left: 45%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .icon-tel {
+        left: 50%;
+    }
+}

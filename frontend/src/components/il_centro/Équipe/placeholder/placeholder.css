@@ -1,0 +1,54 @@
+.placeholder-card {
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+   
+  }
+  
+  .placeholder-img {
+    height: 200px;
+    background-color: #e0e0e0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .placeholder-title {
+    height: 20px;
+    width: 80%;
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+  }
+  
+  .placeholder-author {
+    height: 15px;
+    width: 60%;
+    background-color: #e0e0e0;
+  }
+  
+  .placeholder-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .placeholder-button {
+    height: 30px;
+    width: 45%;
+    background-color: #e0e0e0;
+  }
+  
+  .pulse {
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }

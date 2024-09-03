@@ -1,0 +1,98 @@
+.text-carosello{
+    color: rgba(3, 70, 19, 0.927);
+    font-family: "Comfortaa"  ;
+    font-weight: 400;
+    font-style: 33px;
+
+}
+
+.carousel-item img {
+    width: 100%; /* Occupa il 100% della larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+    max-height: 80vh; /* Imposta un'altezza massima per l'immagine */
+    object-fit: cover; /* Copre l'area del contenitore mantenendo le proporzioni */
+  }
+  
+  @media (max-width: 767px) {
+    .carousel-item img {
+      max-height: 50vh; /* Riduce l'altezza massima su schermi più piccoli */
+    }
+  }
+
+.h2_Hero{
+    color:#08624A;
+    font-family: "Comfortaa";
+    font-weight: 100;
+    font-style: 35px;
+}
+.p_Hero{
+    color: #08624A;
+    font-family: "Comfortaa";
+    font-weight: 400;
+    font-style: 23px;
+}
+
+.tab_esami{
+    color:  #ffffff;
+    background-color: #08624A;
+    font-family: "Comfortaa";
+    font-weight: 400;
+    font-style: 23px;
+}
+.tab-image {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-tabs .nav-link {
+  color: rgba(0, 0, 0, 0.927) !important;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: rgba(3, 70, 19, 0.927) !important;
+}
+
+.nav-tabs .nav-link.active {
+    color: rgba(3, 70, 19, 0.927) !important;
+    font-weight: 700; 
+}
+.text-title-esami{
+    color: rgba(3, 70, 19, 0.927);
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.tab-image-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.h4_esami{
+    color:#ffffff;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-style: 24px;
+}
+
+.text_esami{
+    color: #ffffff;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: 16px;
+}

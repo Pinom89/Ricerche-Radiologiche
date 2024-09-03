@@ -1,0 +1,33 @@
+.title_impegni{
+    border-left: 7px solid #20715C;
+    color: #20715C;
+}
+
+.title_principale_impegni{
+   color :#FFFFFF;
+   font-family: 'Comforta', sans-serif;
+   font-weight: 100;
+   font-size: 31px;
+   background-color: #08624A 
+}
+
+.text_impegni{
+    font-size:14px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    color: black;
+    
+ }
+
+ .h4_impegni{
+    font-size: 17px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+ }
+
+ .h2_impegni{
+    font-size: 28px;
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+   
+ }

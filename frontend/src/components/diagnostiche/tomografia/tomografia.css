@@ -1,0 +1,31 @@
+.title_tomografia {
+  border-left: 7px solid #20715c;
+  color: #20715c;
+}
+
+.title_principale_tomografia {
+  color: #ffffff;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 31px;
+  background-color: #08624a;
+}
+
+.text_tomografia {
+  font-size: 14px;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: black;
+}
+
+.h4_tomografia {
+  font-size: 17px;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h2_tomografia {
+  font-size: 28px;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}

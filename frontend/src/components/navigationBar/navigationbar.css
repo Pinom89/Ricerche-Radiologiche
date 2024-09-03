@@ -1,0 +1,17 @@
+.font{
+    font-family: 'Comforta', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #08624a;
+    background-color: #FFFFFF;
+}
+
+
+
+.navbar-nav {
+   --bs-navbar-color:#08624a;
+   --bs-navbar-hover-color:#000;
+   --bs-navbar-active-color:#000;
+   --bs-navbar-disabled-color:#08624a;
+  
+}

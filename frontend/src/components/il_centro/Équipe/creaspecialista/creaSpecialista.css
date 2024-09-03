@@ -1,0 +1,26 @@
+.new-specialist-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  font-size: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.new-specialist-content {
+  height: 400px;
+  margin-bottom: 80px;
+}
+
+.error-title {
+  border: red solid 2px;
+  font-weight: bold;
+}
+
+.explane-title {
+  border: red solid 2px;
+  font-size: 20px;
+  overflow: hidden;
+  margin: 15px 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+.title_dentale {
+  border-left: 7px solid #20715c;
+  color: #20715c;
+}
+
+.title_principale_dentale {
+  color: #ffffff;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 31px;
+  background-color: #08624a;
+}
+
+.text_dentale {
+  font-size: 14px;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: black;
+}
+
+.h4_dentale {
+  font-size: 17px;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.h2_dentale, .h3_dentale {
+  font-size: 28px;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: #08624a
+}
