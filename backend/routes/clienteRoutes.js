@@ -20,7 +20,7 @@ router.post("/", cloudinaryUploader.single("avatar"), async (req, res) => {
     }
     const newCliente = new Cliente(cliente);
     await newCliente.save(); // Salva il nuovo utente nel database
-    // Salva nuova prenotazione
+  
    
     // Rimuovi la password dalla risposta per sicurezza
     const clienteResponse = newCliente.toObject();
