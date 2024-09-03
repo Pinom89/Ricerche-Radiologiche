@@ -34,14 +34,14 @@ dotenv.config();
 // Inizializza l'app Express
 const app = express();
        // ** TODO  **
-{/*
+
 const corsOptions = {
   origin: function (origin, callback) {
      // Definiamo una whitelist di origini consentite. 
     // Queste sono gli URL da cui il nostro frontend farà richieste al backend.
     const whitelist = [
       'http://localhost:3000',
-      'http://localhost:5000',
+      // to do= inserire rotte url front & back 
     ];
 
     if (process.env.NODE_ENV === 'development') {
@@ -60,7 +60,7 @@ const corsOptions = {
 
 // NEW! passiamo `corsOptions` a cors()
 app.use(cors(corsOptions));
-*/}
+
 
 // abilitato server per collegamento front-end
 app.use(cors());
