@@ -73,14 +73,14 @@ export default function Registrati() {
     if (avatar) {
       formData.append("avatar", avatar);
     }
-    console.log('Dati inviati:', register);
+    //  console.log('Dati inviati:', register);
     try {
       const result = await fetchWithAuth(`${API_URL}/pazienti`, {
         method: 'POST',
         body: formData,
       });
 
-      console.log('Risultato:', result);
+    //   console.log('Risultato:', result);
     } catch (error) {
       console.error('Errore durante la registrazione:', error);
     } finally {
