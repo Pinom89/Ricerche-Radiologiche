@@ -41,8 +41,8 @@ const corsOptions = {
     // Queste sono gli URL da cui il nostro frontend farà richieste al backend.
     const whitelist = [
       'http://localhost:3000',
-      'https://ricerche-radiologiche.onrender.com'
-      // to do= inserire rotte url front  
+      'https://ricerche-radiologiche.onrender.com',
+      'https://ricerche-radiologiche.vercel.app'
     ];
 
     if (process.env.NODE_ENV === 'development') {
