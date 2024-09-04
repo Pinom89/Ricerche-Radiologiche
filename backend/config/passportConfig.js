@@ -3,7 +3,7 @@ import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import{Cliente}  from "../models/Cliente.js";
 
 
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = process.env.BACKEND_URL || "https://ricerche-radiologiche.onrender.com"
 // Configuro la strategia di autenticazione Google
 passport.use(
     new GoogleStrategy(
