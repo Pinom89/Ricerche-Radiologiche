@@ -17,7 +17,7 @@ import {
 import path from 'path'; // UPLOAD: Modulo per gestire i percorsi dei file
 import { fileURLToPath } from 'url'; // UPLOAD Per convertire URL in percorsi di file
 import authRoutes from './routes/authRoutes.js';
-import session  from 'express-session';
+import session from 'express-session';
 import passport from "./config/passportConfig.js";
 
 
@@ -33,11 +33,11 @@ dotenv.config();
 
 // Inizializza l'app Express
 const app = express();
-       // ** TODO  **
+// ** TODO  **
 
 const corsOptions = {
   origin: function (origin, callback) {
-     // Definiamo una whitelist di origini consentite. 
+    // Definiamo una whitelist di origini consentite. 
     // Queste sono gli URL da cui il nostro frontend farà richieste al backend.
     const whitelist = [
       'http://localhost:3000',
@@ -48,7 +48,7 @@ const corsOptions = {
     if (process.env.NODE_ENV === 'development') {
       // In sviluppo, permettiamo anche richieste senza origine (es. Postman)
       callback(null, true);
-    } else if (whitelist.indexOf(origin) !== -1  || !origin) {
+    } else if (whitelist.indexOf(origin) !== -1 || !origin) {
       // In produzione, controlliamo se l'origine è nella whitelist
       callback(null, true);
     } else {
@@ -72,13 +72,13 @@ app.use(express.json());
 // Configurazione della sessione per autenticazione Google
 app.use(
   session({
-      // Il 'secret' è usato per firmare il cookie di sessione
+    // Il 'secret' è usato per firmare il cookie di sessione
     // È importante che sia una stringa lunga, unica e segreta
-    secret: process.env.SESSION_SECRET, 
-     // 'resave: false' dice al gestore delle sessioni di non
+    secret: process.env.SESSION_SECRET,
+    // 'resave: false' dice al gestore delle sessioni di non
     // salvare la sessione se non è stata modificata
     resave: false,
-     // 'saveUninitialized: false' dice al gestore delle sessioni di non
+    // 'saveUninitialized: false' dice al gestore delle sessioni di non
     // creare una sessione finché non memorizziamo qualcosa
     // Aiuta a implementare le "login sessions" e riduce l'uso del server di memorizzazione
     saveUninitialized: false,
@@ -92,6 +92,23 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// ** // 
+// Usa le route di autenticazione
+app.use('/auth', authRoutes);
+
+// ** // 
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile', 'email'] })
+);
+
+app.get('/auth/google/callback',
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  (req, res) => {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  }
+);
+// ** // 
 // ** Fine configurazione Google**
 
 // Connessione a MongoDB

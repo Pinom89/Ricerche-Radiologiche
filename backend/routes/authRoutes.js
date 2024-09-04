@@ -204,7 +204,7 @@ router.get(
 // Rotta di callback per l'autenticazione Google
 
 router.get(
-    "/auth/google/callback",
+    "/google/callback",
     // Passport tenta di autenticare l'utente con le credenziali Google
     passport.authenticate("google", { failureRedirect: `${FRONTEND_URL}/login`}),
     // Se l'autenticazione fallisce, l'utente viene reindirizzato alla pagina di login
