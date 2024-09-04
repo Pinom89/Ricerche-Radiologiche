@@ -40,16 +40,7 @@ export default function Forgotpassword() {
           },
           body: JSON.stringify(reset),
         });
-        //     console.log(reset);
-        // if (!response.ok) {
-        //   const errorData = await response.json().catch(() => ({}));
-        //   console.error("Dettagli errore:", errorData);
-        //   throw new Error(
-        //     `Errore nelle password: ${
-        //       errorData.message || response.statusText
-        //     }`
-        //   );
-        
+                
         alert("Password cambiata con successo");
 
         setTimeout(() => {
@@ -64,7 +55,7 @@ export default function Forgotpassword() {
   
     return (
       <>
-        <Container fluid className="prenotazione-esame mb-4 p-0">
+        <Container fluid className="prenotazione-esame mb-4 p-0 font">
           <Row>
             <Col>
               <h2 className=" text-center title_principale_login pt-4 pb-4">
@@ -73,12 +64,12 @@ export default function Forgotpassword() {
             </Col>
           </Row>
         </Container>
-        <Container className="my-5 p-0">
-          <Row>
-            <Col>
-              <Form onSubmit={handleResetSubmit}>
+        <Container className="my-5 p-0 font">
+          <Row className='d-flex  flex-column justify-content-center align-items-center'>
+            <Col sm={6} >
+              <Form onSubmit={handleResetSubmit} className='bg-light p-5'>
                 
-                <InputGroup className="mb-3 mt-5">
+                <InputGroup className="mt-2 mb-1">
                   <Form.Control
                     placeholder="Vecchia 
                     password"
@@ -92,7 +83,7 @@ export default function Forgotpassword() {
                 </InputGroup>
           
          
-                <InputGroup className="mb-3 mt-5">
+                <InputGroup className="mb-2 mt-1">
                   <Form.Control
                     placeholder="Nuova password"
                     name="newPassword"
@@ -103,7 +94,7 @@ export default function Forgotpassword() {
                     onChange={handleInputChange}
                   />
                 </InputGroup>
-                <div className="d-flex justify-content-start align-items-center gap-2">
+                <div className="d-flex justify-content-center align-items-center gap-2 mt-3">
                   <Button variant="dark" type="submit" className="me-2n">
                     Modifica password
                   </Button>

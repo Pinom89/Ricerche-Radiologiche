@@ -72,11 +72,11 @@ export default function ResetPassword() {
         </Row>
       </Container>
       <Container className="my-5 p-0">
-        <Row>
-          <Col>
+        <Row className="d-flex flex-column justify-content-center align-items-center">
+          <Col sm={6} className=" bg-light p-5 ">
             <Form onSubmit={handleResetSubmit}>
               <Form.Label>Inserisci nuova password</Form.Label>
-              <InputGroup className="mb-3 mt-5">
+              <InputGroup >
                 <Form.Control
                   placeholder="Password "
                   name="password"
@@ -87,7 +87,7 @@ export default function ResetPassword() {
                   onChange={handleInputChange}
                 />
               </InputGroup>
-              <div className="d-flex justify-content-start align-items-center gap-2">
+              <div className="d-flex justify-content-center align-items-center gap-2">
                 <Button variant="dark" type="submit" className="me-2n">
                   Conferma modifica
                 </Button>
