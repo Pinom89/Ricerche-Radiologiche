@@ -204,9 +204,9 @@ router.get(
 // Rotta di callback per l'autenticazione Google
 
 router.get(
-    "/google/callback",
+    "/auth/google/callback",
     // Passport tenta di autenticare l'utente con le credenziali Google
-    passport.authenticate("google", { failureRedirect: `${FRONTEND_URL}/login`}),
+    passport.authenticate("google", { failureRedirect: `${process.env.FRONTEND_URL}/login`}),
     // Se l'autenticazione fallisce, l'utente viene reindirizzato alla pagina di login
     async (req, res) => {
         try {
@@ -221,7 +221,7 @@ router.get(
             
             // Reindirizza l'utente al frontend, passando il token come parametro URL
             // Il frontend può quindi salvare questo token e usarlo per le richieste autenticate
-             res.redirect(`${FRONTEND_URL}/login?token=${token}`);
+             res.redirect(`${process.env.FRONTEND_URL}/login?token=${token}`);
 
                // Reindiriziamo con token e isAdmin come parametri URL ** 
              //  res.redirect(`${FRONTEND_URL}/?token=${token}&isAdmin=${isAdmin}`);
