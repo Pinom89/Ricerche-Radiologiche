@@ -26,7 +26,7 @@ export default function Contatti() {
     telefono: "",
     email: "",
     messaggio: "",
-    risposta: null,
+    risposta: "",
     stato: "Nuovo",
   });
 
@@ -65,7 +65,7 @@ export default function Contatti() {
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetchWithAuth(`${API_URL}/contatti`, {
+       await fetchWithAuth(`${API_URL}/contatti`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

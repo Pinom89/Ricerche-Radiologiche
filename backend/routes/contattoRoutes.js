@@ -20,7 +20,7 @@ const router = express.Router(); // Crea un router Express
 router.post('/', async (req, res) => {
   // console.log("Ricevuta richiesta POST:", req.body);
   try {
-      const { nome, cognome, email, telefono,messaggio} = req.body;
+      const { nome, cognome, email, telefono, messaggio} = req.body;
 
       const nuovoMessaggio = new Contatto({
           nome,
@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
           email,
           telefono,
           messaggio,
-          risposta: '',
+          risposta: '', // Imposto uno stato predefinito
           stato: 'Nuovo', // Imposto uno stato predefinito
       });
 
