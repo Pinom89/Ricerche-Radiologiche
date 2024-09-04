@@ -99,9 +99,9 @@ export default function Registrati() {
 
   return (
   
-<Container>
-      <Row>
-        <Col>
+<Container className='font'>
+      <Row className='d-flex flex-column justify-content-center align-items-center'>
+        <Col  sm={6}>
           <h2 className='mt-3 text-center'>Registra il tuo utente</h2>
           <Form onSubmit={handleRegisterSubmit}>
             <InputGroup className="mb-3 mt-5">

@@ -28,8 +28,18 @@ export default function MiePrenotazioni() {
   }, [pazienteLogin._id, API_URL]);
 
   return (
-    <Container>
-      <h1 className="mb-4 text-center">Le mie prenotazioni</h1>
+
+    <> 
+    <Container fluid className="prenotazione-esame mb-4 p-0">
+    <Row>
+      <Col>
+        <h2 className=" text-center title_principale_accettazione pt-4 pb-4">
+        Le mie prenotazioni
+        </h2>
+      </Col>
+    </Row>
+  </Container>
+    <Container className="font">
       <Row className="my-5">
         {prenotazioni.map((prenotazione) => (
           <Col sm={6} md={4} key={prenotazione._id}>
@@ -69,5 +79,8 @@ export default function MiePrenotazioni() {
         ))}
       </Row>
     </Container>
+    </>
   );
 }
+
+

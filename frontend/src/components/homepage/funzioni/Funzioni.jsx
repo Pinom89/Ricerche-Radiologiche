@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 export default function Funzioni() {
   return (
-   <Container className='mt-4 p-0' data-testid="mock-funzioni">
+   <Container className='mt-4 p-0 font' data-testid="mock-funzioni">
     <Row>
       <Col sm={12} md={4} as={Link} to="/referti" className='text-decoration-none'>
         <div className='my-2 mx-3 p-2 classfunz'>

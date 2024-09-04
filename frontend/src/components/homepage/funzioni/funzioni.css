@@ -10,3 +10,12 @@
     border: solid 2px #20715C;
     transform: scale(1.1); 
 }
+
+.font{
+    font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #08624a;
+    background-color: #FFFFFF;
+}
+

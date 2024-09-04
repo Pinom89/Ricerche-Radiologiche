@@ -91,18 +91,18 @@ export default function Login() {
 
   return (
     <>
-      <Container fluid className="prenotazione-esame mb-4 p-0">
+      <Container fluid className="prenotazione-esame mb-4 p-0 ">
         <Row>
           <Col>
-            <h2 className=" text-center title_principale_login pt-4 pb-4">
+            <h2 className=" text-center title_principale_login pt-4 pb-4 ">
               Accedi alla piattaforma
             </h2>
           </Col>
         </Row>
       </Container>
       <Container className="my-5 p-0">
-        <Row>
-          <Col>
+        <Row className="d-flex flex-column justify-content-center align-items-center">
+          <Col sm={4} className=" p-3 col-login">
             <Form onSubmit={handleLoginSubmit}>
               <InputGroup className="mb-3 mt-5">
                 <Form.Control
@@ -128,38 +128,42 @@ export default function Login() {
                 />
               </InputGroup>
 
-             <div className="d-flex justify-content-start align-items-center gap-2">
+             <div className="d-flex flex-column justify-content-start align-items-center">
+              <div className="d-flex justify-content-start align-items-center gap-2">
               <Button variant="dark" type="submit" className="me-2n">
                 Accedi
               </Button>
               <Button
-                variant="outline-dark"
+                variant="dark"
                 onClick={handleReset}
                 type="button"
                 
               >
                 Resetta
               </Button>
-
-              <p>Password dimenticata? <Link to="/forgot-password">Clicca qui</Link></p>
               </div>
-            </Form>
-          </Col>
-        </Row>
-        <Row>
-          <Col className="mt-3 mb-5">
-            <Button
+              <p className="my-3">Password dimenticata? <Link to="/forgot-password">Clicca qui</Link></p>
+              <Button
               variant="light"
               onClick={handleGoogleLogin}
               type="button"
               size="md"
+              className="my-1"
             
             >
               Login with <FcGoogle style={{ fontSize: "25px" }} />
               oogle
             </Button>
+              </div>
+            </Form>
+           
           </Col>
-        </Row>
+       
+       
+          
+          
+         
+          </Row>
       </Container>
     </>
   );

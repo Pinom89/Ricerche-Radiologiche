@@ -206,7 +206,7 @@ export default function Contatti() {
                   <Button
                     type="submit"
                     size="md"
-                    className="btn_prenota_online my-5 mx-2 btn-primary"
+                    className="btn_prenota_online my-5 mx-2 btn-primary py-2"
                   >
                     Invia mail
                   </Button>
@@ -257,7 +257,7 @@ export default function Contatti() {
               <Button
                 as={Link}
                 to="/prenota-esame"
-                className="mb-5 btn_prenota_online btn-primary"
+                className="btn_prenota_online my-5 mx-2 btn-primary py-2"
               >
                 Prenota online
               </Button>

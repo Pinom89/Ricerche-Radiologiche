@@ -273,11 +273,11 @@ export default function PrenotaEsame() {
                     />
                   </Form.Group>
 
-                  <Button variant="success" type="submit" className="my-5 mx-2">
+                  <Button variant="success" type="submit" className="btn_prenota_online my-5 mx-2 btn-primary py-2">
                     Prenota esame
                   </Button>
                   <Button
-                    className="my-5 mx-2"
+                    className="my-5 mx-2 font py-2"
                     variant="outline-dark"
                     onClick={() =>
                       setRegister({
@@ -300,7 +300,7 @@ export default function PrenotaEsame() {
               </>
             ) : (
               <Button
-                className="mt-5 mb-5 btn_prenota_esame_online btn-primary"
+                className="btn_prenota_online my-5 mx-2 btn-primary py-2"
                 as={Link}
                 to="/login"
               >

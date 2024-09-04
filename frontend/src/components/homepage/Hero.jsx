@@ -10,7 +10,7 @@ export default function Hero() {
             <h2 className='text-center h2_Hero my-5'>Ricerche Radiologiche s.r.l.</h2>
             <div  className='d-flex flex-column justify-content-center align-items-center m-auto p-4'>
             <p className='p_Hero mx-3 my-2 '>
-            Ricerche Radiologiche s.r.l., con sede a Molfetta, nasce nel 1949 e consolida negli anni la propria crescita nel campo della Diagnostica per Immagini affermandosi come centro radiologico di riferimento della Regione Puglia. 
+            Ricerche Radiologiche s.r.l., con sede a Roma, nasce nel 1945 e consolida negli anni la propria crescita nel campo della Diagnostica per Immagini affermandosi come centro radiologico di riferimento della Regione Puglia. 
                 Da sempre, il nostro impegno, la nostra serietà ed il nostro lavoro sono posti al servizio dei pazienti e della loro salute.
             </p>
             <p className='p_Hero  mx-3 my-2 '>
