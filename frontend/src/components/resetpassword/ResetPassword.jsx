@@ -6,7 +6,7 @@ import "./resetpassword.css";
 export default function ResetPassword() {
   const navigate = useNavigate();
   const{id, token} = useParams();
-  const API_URL = "http://localhost:5000" || process.env.REACT_APP_API_URL;
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000" 
 
   const [reset, setReset] = useState({
     password:""
@@ -56,7 +56,7 @@ export default function ResetPassword() {
       }, 1500);
     } catch (error) {
       console.error("Errore nella chiamata API di reset password:", error);
-      alert("Password non valido. Riprova.");
+      alert("Password non valida. Riprova.");
     }
   };
 
@@ -75,10 +75,10 @@ export default function ResetPassword() {
         <Row className="d-flex flex-column justify-content-center align-items-center">
           <Col sm={6} className=" bg-light p-5 ">
             <Form onSubmit={handleResetSubmit}>
-              <Form.Label>Inserisci nuova password</Form.Label>
+              <Form.Label className="text-center">Inserisci nuova password</Form.Label>
               <InputGroup >
                 <Form.Control
-                  placeholder="Password "
+                  placeholder="Password"
                   name="password"
                   aria-label="Inserisci nuova password"
                   aria-describedby="basic-addon1"
@@ -87,7 +87,7 @@ export default function ResetPassword() {
                   onChange={handleInputChange}
                 />
               </InputGroup>
-              <div className="d-flex justify-content-center align-items-center gap-2">
+              <div className="d-flex justify-content-center align-items-center gap-2 mt-3">
                 <Button variant="dark" type="submit" className="me-2n">
                   Conferma modifica
                 </Button>
