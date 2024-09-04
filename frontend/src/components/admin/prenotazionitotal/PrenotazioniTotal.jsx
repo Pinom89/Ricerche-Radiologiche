@@ -170,13 +170,15 @@ export default function PrenotazioniTotal() {
         <Col xs={12} md={10} lg={8}>
           <Form onSubmit={handleSearch} className="d-flex flex-column gap-3">
             <Row>
-              <Col xs={12} sm={6} className="mb-3">
+              <Col xs={12} className="mb-3">
                 <Form.Control
                   name="_id"
                   placeholder="Id Prenotazione"
                   onChange={handleInputChange}
                 />
               </Col>
+              </Row>
+              <Row>
               <Col xs={12} sm={6} className="mb-3">
                 <Form.Select name="esame" onChange={handleInputChange}>
                   <option value="">Seleziona Esame</option>
@@ -195,6 +197,8 @@ export default function PrenotazioniTotal() {
                   onChange={handleInputChange}
                 />
               </Col>
+              </Row>
+              <Row>
               <Col xs={12} sm={6} className="mb-3">
                 <Form.Control
                   name="codEsenzione"
@@ -202,9 +206,6 @@ export default function PrenotazioniTotal() {
                   onChange={handleInputChange}
                 />
               </Col>
-            </Row>
-
-            <Row>
               <Col xs={12} sm={6} className="mb-3">
                 <Form.Control
                   name="data"
@@ -212,6 +213,8 @@ export default function PrenotazioniTotal() {
                   onChange={handleInputChange}
                 />
               </Col>
+              </Row>
+              <Row>
               <Col xs={12} sm={6} className="mb-3">
                 <Form.Control
                   name="codiceFiscale"
