@@ -407,7 +407,7 @@ export default function Esami() {
           </Row>
           <Row>
             <Col sm={12} className="text-center my-4">
-              <Button variant="light" onClick={() => navigate("/tac")}>
+              <Button variant="light" onClick={() => navigate("/tomografia")}>
                 Per saperne di più
               </Button>
             </Col>
@@ -486,7 +486,7 @@ export default function Esami() {
             <Col sm={12} className="text-center my-4">
               <Button
                 variant="light"
-                onClick={() => navigate("/risonanza-magnetica")}
+                onClick={() => navigate("/risonanza")}
               >
                 Per saperne di più
               </Button>
