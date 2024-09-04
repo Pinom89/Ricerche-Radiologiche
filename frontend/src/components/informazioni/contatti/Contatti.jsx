@@ -7,7 +7,7 @@ import { FaPhoneFlip } from "react-icons/fa6";
 
 export default function Contatti() {
   // setto link database standard per effettuare fetch
-  const API_URL = "http://localhost:5000";
+  const API_URL = process.env.REACT_APP_API_URL ||"http://localhost:5000";
 
   // creo funzione per acquisire il al cambiamento del di ogni input del form "chiave e valore"
   const handleRegisterInputChange = (e) => {
