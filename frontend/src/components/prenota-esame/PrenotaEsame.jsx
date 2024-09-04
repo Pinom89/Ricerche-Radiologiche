@@ -10,7 +10,7 @@ import formatDate from "../../services/formatdate.js";
 export default function PrenotaEsame() {
   const navigate = useNavigate();
   const { pazienteLogin, isLoggedIn } = useContext(AuthContext);
-  const API_URL = "http://localhost:5000";
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
   const handleRegisterInputChange = (e) => {
     const { name, value } = e.target;
 
