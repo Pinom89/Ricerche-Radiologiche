@@ -14,7 +14,7 @@ export default function Login() {
   const location = useLocation(); //  Accedo ai parametri dell'URL corrente
 
   // to do link {/*process.env.REACT_APP_API_URL ||*/}
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000"
+  const API_URL = process.env.REACT_APP_API_URL || "https://ricerche-radiologiche.onrender.com" ||"http://localhost:5000"
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
