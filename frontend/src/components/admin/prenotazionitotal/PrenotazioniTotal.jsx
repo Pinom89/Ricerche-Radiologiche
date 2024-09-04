@@ -1,14 +1,7 @@
 import React from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useState, useEffect, useCallback } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Table,
-  Form
-} from "react-bootstrap";
+import { Container, Row, Col, Button, Table, Form } from "react-bootstrap";
 import fetchWithAuth from "../../../services/fetchWithAuth.js";
 import DettaglioPrenotazione from "./dettaglioPrenotazione/DettaglioPrenotazione.jsx";
 import formatDate from "../../../services/formatdate.js";
@@ -177,14 +170,14 @@ export default function PrenotazioniTotal() {
         <Col xs={12} md={10} lg={8}>
           <Form onSubmit={handleSearch} className="d-flex flex-column gap-3">
             <Row>
-              <Col xs={12} sm={6}  className="mb-3">
+              <Col xs={12} sm={6} className="mb-3">
                 <Form.Control
                   name="_id"
                   placeholder="Id Prenotazione"
                   onChange={handleInputChange}
                 />
               </Col>
-              <Col xs={12} sm={6}  className="mb-3">
+              <Col xs={12} sm={6} className="mb-3">
                 <Form.Select name="esame" onChange={handleInputChange}>
                   <option value="">Seleziona Esame</option>
                   {esami.map((esame) => (
@@ -194,7 +187,7 @@ export default function PrenotazioniTotal() {
                   ))}
                 </Form.Select>
               </Col>
-              <Col xs={12} sm={6}  className="mb-3">
+              <Col xs={12} sm={6} className="mb-3">
                 <Form.Control
                   name="numRicetta"
                   type="number"
@@ -241,6 +234,27 @@ export default function PrenotazioniTotal() {
             <Row>
               <Col xs={12} sm={6} className="mb-3">
                 <Form.Control
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  onChange={handleInputChange}
+                />
+              </Col>
+              <Col xs={12} sm={6} className="mb-3">
+                <Form.Select name="stato" onChange={handleInputChange}>
+                  <option value="">Seleziona Stato</option>
+                  {stati.map((stato) => (
+                    <option key={stato} value={stato}>
+                      {stato}
+                    </option>
+                  ))}
+                </Form.Select>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col xs={12} sm={6} className="mb-3">
+                <Form.Control
                   name="nome"
                   placeholder="Nome"
                   onChange={handleInputChange}
@@ -250,14 +264,6 @@ export default function PrenotazioniTotal() {
                 <Form.Control
                   name="cognome"
                   placeholder="Cognome"
-                  onChange={handleInputChange}
-                />
-              </Col>
-              <Col xs={12} sm={6} className="mb-3">
-                <Form.Control
-                  name="email"
-                  type="email"
-                  placeholder="Email"
                   onChange={handleInputChange}
                 />
               </Col>

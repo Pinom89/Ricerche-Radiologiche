@@ -120,7 +120,7 @@ export default function ModificaPrenotazione({
         }
       );
 
-      console.log("Prenotazione modificata:", updatedPrenotazione);
+      //  console.log("Prenotazione modificata:", updatedPrenotazione);
       setEditPrenotazione(updatedPrenotazione);
       alert("Prenotazione modificata con successo");
       await handlePrenotazioneUpdate();
