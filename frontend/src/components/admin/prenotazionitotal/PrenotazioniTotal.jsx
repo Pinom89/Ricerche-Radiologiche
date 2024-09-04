@@ -167,24 +167,24 @@ export default function PrenotazioniTotal() {
     );
   // mostro SearchPrenotazioni e mappo la variabile prenotazioni
   return (
-    <Container fluid className="my-5">
+    <Container fluid className="my-5 dimensione">
       <Row className="mb-4">
         <Col>
           <h2 className="text-center">Ricerca Avanzata</h2>
         </Col>
       </Row>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center mb-5">
         <Col xs={12} md={10} lg={8}>
           <Form onSubmit={handleSearch} className="d-flex flex-column gap-3">
             <Row>
-              <Col xs={12} sm={6} md={3} className="mb-3">
+              <Col xs={12} sm={6} md={4} className="mb-3">
                 <Form.Control
                   name="_id"
                   placeholder="Id Prenotazione"
                   onChange={handleInputChange}
                 />
               </Col>
-              <Col xs={12} sm={6} md={3} className="mb-3">
+              <Col xs={12} md={4} className="mb-3">
                 <Form.Select name="esame" onChange={handleInputChange}>
                   <option value="">Seleziona Esame</option>
                   {esami.map((esame) => (
@@ -194,7 +194,7 @@ export default function PrenotazioniTotal() {
                   ))}
                 </Form.Select>
               </Col>
-              <Col xs={12} sm={6} md={3} className="mb-3">
+              <Col xs={12} sm={6} md={4} className="mb-3">
                 <Form.Control
                   name="numRicetta"
                   type="number"
@@ -202,7 +202,7 @@ export default function PrenotazioniTotal() {
                   onChange={handleInputChange}
                 />
               </Col>
-              <Col xs={12} sm={6} md={3} className="mb-3">
+              <Col xs={12} sm={6} md={4} className="mb-3">
                 <Form.Control
                   name="codEsenzione"
                   placeholder="Codice Esenzione"
@@ -212,21 +212,21 @@ export default function PrenotazioniTotal() {
             </Row>
 
             <Row>
-              <Col xs={12} sm={6} md={3} className="mb-3">
+              <Col xs={12}  md={4} className="mb-3">
                 <Form.Control
                   name="data"
                   type="date"
                   onChange={handleInputChange}
                 />
               </Col>
-              <Col xs={12} sm={6} md={3} className="mb-3">
+              <Col xs={12} sm={6} md={4} className="mb-3">
                 <Form.Control
                   name="codiceFiscale"
                   placeholder="Codice Fiscale"
                   onChange={handleInputChange}
                 />
               </Col>
-              <Col xs={12} sm={6} md={3} className="mb-3">
+              <Col xs={12} sm={6} md={4} className="mb-3">
                 <Form.Select name="stato" onChange={handleInputChange}>
                   <option value="">Seleziona Stato</option>
                   {stati.map((stato) => (
@@ -253,7 +253,7 @@ export default function PrenotazioniTotal() {
                   onChange={handleInputChange}
                 />
               </Col>
-              <Col xs={12} md={4} className="mb-3">
+              <Col xs={12} sm={6} md={4} className="mb-3">
                 <Form.Control
                   name="email"
                   type="email"
