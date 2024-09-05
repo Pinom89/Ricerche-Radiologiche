@@ -75,7 +75,7 @@ export default function Registrati() {
     }
     //  console.log('Dati inviati:', register);
     try {
-      const result = await fetchWithAuth(`${API_URL}/pazienti`, {
+       await fetchWithAuth(`${API_URL}/pazienti`, {
         method: 'POST',
         body: formData,
       });
@@ -101,9 +101,9 @@ export default function Registrati() {
   
 <Container className='font'>
       <Row className='d-flex flex-column justify-content-center align-items-center'>
-        <Col  sm={6}>
+        <Col  sm={6} className="bg-light my-1 p-3">
           <h2 className='mt-3 text-center'>Registra il tuo utente</h2>
-          <Form onSubmit={handleRegisterSubmit}>
+          <Form onSubmit={handleRegisterSubmit} >
             <InputGroup className="mb-3 mt-5">
               <Form.Control
                 placeholder="Nome"
