@@ -1,6 +1,8 @@
 .title_accettazione {
-  border-left: 7px solid #20715c;
-  color: #20715c;
+  border-left: 7px solid #08624a;
+  color: #08624a;
+  font-family: "Comfortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
 }
 
 .title_principale_accettazione {

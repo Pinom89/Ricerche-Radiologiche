@@ -1,11 +1,10 @@
-import React , { useState } from 'react'
-import { Container, Row, Col, Form, Button, InputGroup } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import './registrati.css'
-import fetchWithAuth from '../../services/fetchWithAuth'; 
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import "./registrati.css";
+import fetchWithAuth from "../../services/fetchWithAuth";
 
 export default function Registrati() {
-   
   const navigate = useNavigate();
   const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
@@ -26,7 +25,10 @@ export default function Registrati() {
     let age = today.getFullYear() - birth.getFullYear();
     const monthDiff = today.getMonth() - birth.getMonth();
 
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birth.getDate())
+    ) {
       age--;
     }
 
@@ -36,21 +38,21 @@ export default function Registrati() {
   const handleRegisterInputChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === 'dataDiNascita') {
+    if (name === "dataDiNascita") {
       if (isAdult(value)) {
-        setRegister(prev => ({
+        setRegister((prev) => ({
           ...prev,
-          [name]: value
+          [name]: value,
         }));
         setNotAdult(false);
       } else {
         setNotAdult(true);
-        e.target.value = '';
+        e.target.value = "";
       }
     } else {
-      setRegister(prev => ({
+      setRegister((prev) => ({
         ...prev,
-        [name]: value
+        [name]: value,
       }));
     }
   };
@@ -63,9 +65,9 @@ export default function Registrati() {
     e.preventDefault();
 
     const formData = new FormData();
-    
+
     // Aggiungi i campi del registro al FormData
-    Object.keys(register).forEach(key => {
+    Object.keys(register).forEach((key) => {
       formData.append(key, register[key]);
     });
 
@@ -75,14 +77,14 @@ export default function Registrati() {
     }
     //  console.log('Dati inviati:', register);
     try {
-       await fetchWithAuth(`${API_URL}/pazienti`, {
-        method: 'POST',
+      await fetchWithAuth(`${API_URL}/pazienti`, {
+        method: "POST",
         body: formData,
       });
 
-    //   console.log('Risultato:', result);
+      //   console.log('Risultato:', result);
     } catch (error) {
-      console.error('Errore durante la registrazione:', error);
+      console.error("Errore durante la registrazione:", error);
     } finally {
       setRegister({
         nome: "",
@@ -93,120 +95,129 @@ export default function Registrati() {
       });
       setAvatar(null);
       alert("Registrazione completata!");
-      navigate('/login');
+      navigate("/login");
     }
   };
 
   return (
-  
-<Container className='font'>
-      <Row className='d-flex flex-column justify-content-center align-items-center'>
-        <Col  sm={6} className="bg-light my-1 p-3">
-          <h2 className='mt-3 text-center'>Registra il tuo utente</h2>
-          <Form onSubmit={handleRegisterSubmit} >
-            <InputGroup className="mb-3 mt-5">
-              <Form.Control
-                placeholder="Nome"
-                name="nome"
-                aria-label="Nome"
-                aria-describedby="basic-addon1"
-                type='text'
-                required
-                value={register.nome}
-                onChange={handleRegisterInputChange}
-              />
-            </InputGroup>
+    <>
+      <Container fluid className="prenotazione-esame mb-2 p-0 ">
+        <Row>
+          <Col>
+            <h2 className=" text-center title_principale_login pt-4 pb-4 ">
+              Registra il tuo utente
+            </h2>
+          </Col>
+        </Row>
+      </Container>
+      <Container className="font">
+        <Row className="d-flex flex-column justify-content-center align-items-center">
+          <Col sm={6} className="bg-light my-3 p-3">
+            <Form onSubmit={handleRegisterSubmit}>
+              <InputGroup className="mb-3 mt-5">
+                <Form.Control
+                  placeholder="Nome"
+                  name="nome"
+                  aria-label="Nome"
+                  aria-describedby="basic-addon1"
+                  type="text"
+                  required
+                  value={register.nome}
+                  onChange={handleRegisterInputChange}
+                />
+              </InputGroup>
 
-            <InputGroup className="mb-3">
-              <Form.Control
-                placeholder="Cognome"
-                name="cognome"
-                aria-label="Cognome"
-                aria-describedby="basic-addon2"
-                type='text'
-                value={register.cognome}
-                onChange={handleRegisterInputChange}
-              />
-            </InputGroup>
+              <InputGroup className="mb-3">
+                <Form.Control
+                  placeholder="Cognome"
+                  name="cognome"
+                  aria-label="Cognome"
+                  aria-describedby="basic-addon2"
+                  type="text"
+                  value={register.cognome}
+                  onChange={handleRegisterInputChange}
+                />
+              </InputGroup>
 
-            <InputGroup className="mb-3">
-              <Form.Control
-                placeholder="Email"
-                name="email"
-                aria-label="Email"
-                aria-describedby="basic-addon2"
-                type='email'
-                required
-                value={register.email}
-                onChange={handleRegisterInputChange}
-              />
-            </InputGroup>
+              <InputGroup className="mb-3">
+                <Form.Control
+                  placeholder="Email"
+                  name="email"
+                  aria-label="Email"
+                  aria-describedby="basic-addon2"
+                  type="email"
+                  required
+                  value={register.email}
+                  onChange={handleRegisterInputChange}
+                />
+              </InputGroup>
 
-            <InputGroup className="mb-3">
-              <Form.Control
-                placeholder="Data di nascita"
-                name="dataDiNascita"
-                aria-label="Date"
-                max={new Date().toISOString().split('T')[0]}
-                aria-describedby="basic-addon2"
-                type='date'
-                value={register.dataDiNascita}
-                onChange={handleRegisterInputChange}
-              />
-              
-            </InputGroup>
-            {notAdult && <p className='text-danger'>Devi avere almeno 18 anni per registrarti</p>}
-            <InputGroup className="mb-3">
-              <Form.Control
-                placeholder="Avatar"
-                aria-label="file"
-                aria-describedby="basic-addon2"
-                type='file'
-                name="avatar"
-                onChange={handleFileChange}
-                accept="image/*"
-              />
-            </InputGroup>
+              <InputGroup className="mb-3">
+                <Form.Control
+                  placeholder="Data di nascita"
+                  name="dataDiNascita"
+                  aria-label="Date"
+                  max={new Date().toISOString().split("T")[0]}
+                  aria-describedby="basic-addon2"
+                  type="date"
+                  value={register.dataDiNascita}
+                  onChange={handleRegisterInputChange}
+                />
+              </InputGroup>
+              {notAdult && (
+                <p className="text-danger">
+                  Devi avere almeno 18 anni per registrarti
+                </p>
+              )}
+              <InputGroup className="mb-3">
+                <Form.Control
+                  placeholder="Avatar"
+                  aria-label="file"
+                  aria-describedby="basic-addon2"
+                  type="file"
+                  name="avatar"
+                  onChange={handleFileChange}
+                  accept="image/*"
+                />
+              </InputGroup>
 
-            <InputGroup className="mb-3">
-              <Form.Control
-                placeholder="Password"
-                name="password"
-                aria-label="password"
-                aria-describedby="basic-addon2"
-                type='password'
-                required
-                value={register.password}
-                onChange={handleRegisterInputChange}
-              />
-            </InputGroup>
-          <div className='d-flex justify-content-center align-items-center gap-3 py-4'>
-            <Button
-              variant="dark"
-              type="submit"
-            >
-              Crea Nuovo Utente
-            </Button>
+              <InputGroup className="mb-3">
+                <Form.Control
+                  placeholder="Password"
+                  name="password"
+                  aria-label="password"
+                  aria-describedby="basic-addon2"
+                  type="password"
+                  required
+                  value={register.password}
+                  onChange={handleRegisterInputChange}
+                />
+              </InputGroup>
+              <div className="d-flex justify-content-center align-items-center gap-3 py-4">
+                <Button variant="dark" type="submit">
+                  Crea Nuovo Utente
+                </Button>
 
-            <Button
-              variant="outline-dark"
-              onClick={() => {
-                setRegister({
-                  nome: "",
-                  cognome: "",
-                  email: "",
-                  dataDiNascita: "",
-                  password: "",
-                });
-                setAvatar(null);
-              }}
-            >
-              Reset
-            </Button>
-            </div>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+                <Button
+                  variant="outline-dark"
+                  onClick={() => {
+                    setRegister({
+                      nome: "",
+                      cognome: "",
+                      email: "",
+                      dataDiNascita: "",
+                      password: "",
+                    });
+                    setAvatar(null);
+                  }}
+                >
+                  Reset
+                </Button>
+              </div>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }

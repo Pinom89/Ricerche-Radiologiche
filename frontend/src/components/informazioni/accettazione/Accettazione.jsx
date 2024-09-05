@@ -29,14 +29,14 @@ export default function Accettazioni() {
       <Container className="mb-4">
         <Row>
           <Col sm={12} md={10}>
-            <p className="text-accettazione">
+            <p className="text_accettazione">
               L’Accettazione è aperta dal lunedì al venerdì dalle ore 8:00 alle
               19:00, il sabato dalle ore 8:00 alle 13:00.
             </p>
             <h4 className="h4_accettazione ps-4 title_accettazione mb-3">
               Come presentarsi
             </h4>
-            <p className="text-accettazione">
+            <p className="text_accettazione">
               Per eseguire l’accettazione si consiglia di presentarsi presso lo
               sportello (per effettuare le pratiche di registrazione dei dati
               personali, pagamento della visita/esame, ecc.) circa 30 minuti

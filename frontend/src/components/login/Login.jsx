@@ -100,9 +100,9 @@ export default function Login() {
           </Col>
         </Row>
       </Container>
-      <Container className="my-5 p-0">
+      <Container className="my-5 p-0 font">
         <Row className="d-flex flex-column justify-content-center align-items-center">
-          <Col sm={4} className=" p-3 col-login">
+          <Col sm={4} className=" p-3 col-login bg-light">
             <Form onSubmit={handleLoginSubmit}>
               <InputGroup className="mb-3 mt-5">
                 <Form.Control
@@ -144,7 +144,7 @@ export default function Login() {
               </div>
               <p className="my-3">Password dimenticata? <Link to="/forgot-password">Clicca qui</Link></p>
               <Button
-              variant="light"
+              variant="warning"
               onClick={handleGoogleLogin}
               type="button"
               size="md"
