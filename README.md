@@ -1,7 +1,7 @@
 # => Ricerche Radiologiche MERN Full Stack
 
 
-# Link di accesso=> https://striveblogmazzilli.vercel.app/
+# Link di accesso=> https://ricerche-radiologiche.vercel.app/
 
 # 🏥 Ricerche Radiologiche: Il Tuo Centro di Imaging All'Avanguardia! 📸
 
@@ -34,7 +34,7 @@ Benvenuti nel futuro della radiologia! 🚀 Ricerche Radiologiche non è solo un
 
 ### 1. Clonazione del Repository
 ```bash
-git clone https://github.com/your-username/ricerche-radiologiche.git
+git clone https://github.com/Pinom89/Ricerche-Radiologiche.git
 cd ricerche-radiologiche
 ```
 
@@ -44,13 +44,13 @@ cd ricerche-radiologiche
 npm install
 
 # Avvio del server backend
-npm run start:server
+node server.js
 ```
 
 ### 3. Installazione Frontend
 ```bash
 # Naviga nella cartella del frontend
-cd client
+cd frontend
 
 # Installa le dipendenze del frontend
 npm install
