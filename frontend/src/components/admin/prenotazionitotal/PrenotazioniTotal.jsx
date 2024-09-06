@@ -30,12 +30,12 @@ export default function PrenotazioniTotal() {
   const [sortOrder, setSortOrder] = useState("asc");
 
   const esami = [
-    "Raggi",
-    "Panoramica dentale",
-    "Ecografia/Ecodoppler",
-    "Senologia",
+    "Visita Senologica",
+    "Radiografia",
     "Tac",
     "Risonanza Magnetica",
+    "Ecografia/Ecodoppler",
+    "Diagnostica Dentale"
   ];
   const stati = [
     "Aperto",

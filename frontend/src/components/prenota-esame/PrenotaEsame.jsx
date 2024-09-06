@@ -222,8 +222,8 @@ export default function PrenotaEsame() {
                       onChange={handleRegisterInputChange}
                       value={register.esame}
                     >
-                      <option>Visita senologica</option>
-                      <option>Radiografie</option>
+                      <option>Radiografia</option>
+                      <option>Visita Senologica</option>
                       <option>Tac</option>
                       <option>Risonanza Magnetica</option>
                       <option>Ecografia/Ecodoppler</option>
