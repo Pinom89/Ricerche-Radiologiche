@@ -61,6 +61,19 @@ export default function PrenotaEsame() {
       formData.append("ricetta", ricettaFile);
     }
 
+   
+    if (!register.nome || !register.cognome) {
+      alert("Campi nome o cognome non valido. Verifica dati.");
+      return;
+    }
+
+    if (!register.numRicetta) {
+      window.confirm("Numero ricetta non inserito. Vuoi procedere?");
+    }
+
+
+
+    // Invio la richiesta POST
     try {
       const result = await fetchWithAuth(`${API_URL}/prenotazioni`, {
         method: "POST",
@@ -85,6 +98,7 @@ export default function PrenotaEsame() {
       alert("Prenotazione avvenuta con con successo");
     } catch (error) {
       console.error("Errore nella creazione", error);
+      alert("Errore nella creazione della prenotazione");
     } finally {
       setTimeout(() => {
         navigate("/");
@@ -244,7 +258,7 @@ export default function PrenotaEsame() {
                     <Form.Label className="mt-2 title_form_prenotazione">Numero Ricetta</Form.Label>
                     <Form.Control
                       type="number"
-                      required
+                      
                       name="numRicetta"
                       min="0"
                       onChange={handleRegisterInputChange}

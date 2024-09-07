@@ -166,7 +166,7 @@ router.post('/', cloudinaryUploader.single("ricetta"), async (req, res) => {
     });
     res.status(201).json(newPrenotazione); // Risponde con i dati del nuova prenotazione e uno status 201 (Created)
   } catch (err) {
-    console.error("Errore durante la creazione dell'utente", err);
+    console.error("Errore durante la creazione della prenotazione:", err);
     if (err.name === 'ValidationError') {
       return res.status(400).json({ message: err.message });  // Gestisce errori di validazione e risponde con un messaggio di errore
     }

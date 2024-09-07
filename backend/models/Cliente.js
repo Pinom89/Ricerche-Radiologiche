@@ -23,7 +23,7 @@ const prenotazioneSchema = new Schema({
   codiceFiscale: { type: String },
   esame: { type: String, required: true },
   ricetta: { type: String },
-  numRicetta: { type: Number, required: true },
+  numRicetta: { type: Number},
   codEsenzione: { type: String },
   email: { type: String, required: true },
   stato: { type: String }

@@ -10,7 +10,6 @@ import { Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
-
 // <Button variant="success">Accedi</Button>
 
 export default function Logged() {
@@ -49,7 +48,6 @@ export default function Logged() {
       if (token) {
         try {
           await setIsLoggedIn(true);
-          console.log(token)
         } catch (error) {
           console.error("Token non valido:", error);
           localStorage.removeItem("token");
@@ -117,7 +115,9 @@ export default function Logged() {
           <Dropdown
             show={show}
             onToggle={toggleShow}
-            className={isSmallScreen ? "btn-group dropbottom" : "btn-group dropstart"}
+            className={
+              isSmallScreen ? "btn-group dropbottom" : "btn-group dropstart"
+            }
           >
             <Dropdown.Toggle as="div" onClick={toggleShow} className="p-md-0">
               <OverlayTrigger
@@ -137,29 +137,33 @@ export default function Logged() {
             <Dropdown.Menu>
               <Dropdown.Item className="text-decoration-none">
                 {" "}
-                <Link to="/cambia-password" className="custom-link" >Cambia password</Link>
+                <Link to="/cambia-password" className="custom-link">
+                  Cambia password
+                </Link>
               </Dropdown.Item>
               <Dropdown.Item className="text-decoration-none">
-              {" "}
-              <Link to="/modifica-account" className="custom-link" >Modifica Acccount</Link>
+                {" "}
+                <Link to="/modifica-account" className="custom-link">
+                  Modifica Acccount
+                </Link>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         )}
         {!isLoggedIn && (
-           <OverlayTrigger
-           placement="bottom"
-           delay={{ show: 250, hide: 400 }}
-           overlay={renderTooltip3}
-         >
-          <Button
-            variant="outline-success"
-            onClick={() => navigate("/register")}
-            className="textsize"
+          <OverlayTrigger
+            placement="bottom"
+            delay={{ show: 250, hide: 400 }}
+            overlay={renderTooltip3}
           >
-            <RiUserAddLine /> 
-          </Button>
-         </OverlayTrigger>
+            <Button
+              variant="outline-success"
+              onClick={() => navigate("/register")}
+              className="textsize"
+            >
+              <RiUserAddLine />
+            </Button>
+          </OverlayTrigger>
         )}
         <OverlayTrigger
           placement="bottom"
